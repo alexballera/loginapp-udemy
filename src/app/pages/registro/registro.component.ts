@@ -24,11 +24,11 @@ export class RegistroComponent implements OnInit {
     if (form.invalid) { return; }
     this.auth.nuevoUsuario(this.usuario)
     .subscribe(resp => {
-      console.log(resp)
+      console.log(resp);
     },
     err => {
-      console.log(err.error.error.message)
-    })
+      console.log(err.error.error.message);
+    });
   }
 
 

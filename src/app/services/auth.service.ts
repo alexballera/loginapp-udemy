@@ -18,24 +18,24 @@ export class AuthService {
     const authData = {
       ...usuario,
       returnSecureToken: true
-    }
+    };
 
     return this.http.post(
       `${this.url}:signInWithPassword?key=${this.apiKey}`,
       authData
-    )
+    );
   }
 
   nuevoUsuario(usuario: UsuarioModel) {
     const authData = {
       ...usuario,
       returnSecureToken: true
-    }
+    };
 
     return this.http.post(
       `${this.url}:signUp?key=${this.apiKey}`,
       authData
-    )
+    );
   }
 
 }

@@ -9,12 +9,6 @@ export class AuthService {
 
   private url = 'https://identitytoolkit.googleapis.com/v1/accounts';
   private apiKey = 'AIzaSyC0UKCx2qn9dUeZE1MvHu9REz2dWtL27Xc';
-  // Crear Nuevo Usuario
-  // signUp?key=[API_KEY]
-
-  // LogIn
-  // signInWithPassword?key=[API_KEY]
-
 
   constructor(private http: HttpClient) {}
 

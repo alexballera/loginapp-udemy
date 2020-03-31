@@ -7,7 +7,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class AuthService {
 
-  private url = 'https://identitytoolkit.googleapis.com/v1/accounts:';
+  private url = 'https://identitytoolkit.googleapis.com/v1/accounts';
   private apiKey = 'AIzaSyC0UKCx2qn9dUeZE1MvHu9REz2dWtL27Xc';
   // Crear Nuevo Usuario
   // signUp?key=[API_KEY]
@@ -22,6 +22,16 @@ export class AuthService {
 
   login(usuario: UsuarioModel) {}
 
-  nuevoUsuario(usuario: UsuarioModel) {}
+  nuevoUsuario(usuario: UsuarioModel) {
+    const authData = {
+      ...usuario,
+      returnSecureToken: true
+    }
+
+    return this.http.post(
+      `${this.url}:signUp?key=${this.apiKey}`,
+      authData
+    )
+  }
 
 }

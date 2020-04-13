@@ -30,7 +30,8 @@ export class AuthService {
       authData
     ).pipe(
       map(resp => {
-        this.guardarToken(resp.idToken);
+        // tslint:disable-next-line: no-string-literal
+        this.guardarToken(resp['idToken']);
         return resp;
       })
     );;
@@ -47,7 +48,8 @@ export class AuthService {
       authData
     ).pipe(
       map(resp => {
-        this.guardarToken(resp.idToken);
+        // tslint:disable-next-line: no-string-literal
+        this.guardarToken(resp['idToken']);
         return resp;
       })
     );
